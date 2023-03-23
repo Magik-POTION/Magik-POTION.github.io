@@ -1,29 +1,18 @@
 import { useCallback } from "react";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
 import Particles from "react-particles";
-import type {
+import { loadFull } from "tsparticles";
+import {
   Container,
   Engine,
-  IOptions,
   RecursivePartial,
+  IOptions,
 } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-
-/* background by SVGBackgrounds.com */
-
-const styles = StyleSheet.create({
-  view: { flex: 1, flexDirection: "column" },
-  content: {
-    flex: 1,
-    flexDirection: "column",
-  },
-});
 
 const particleOptions: RecursivePartial<IOptions> = {
   autoPlay: true,
   background: {
     color: {
-      value: "#120b12",
+      value: "#000000",
     },
   },
   fpsLimit: 144,
@@ -32,10 +21,6 @@ const particleOptions: RecursivePartial<IOptions> = {
   },
   interactivity: {
     events: {
-      onClick: {
-        enable: true,
-        mode: "push",
-      },
       onHover: {
         enable: true,
         mode: "repulse",
@@ -43,21 +28,18 @@ const particleOptions: RecursivePartial<IOptions> = {
       resize: true,
     },
     modes: {
-      push: {
-        quantity: 4,
-      },
       repulse: {
-        distance: 200,
-        duration: 0.4,
+        distance: 100,
+        duration: 0.2,
       },
     },
   },
   particles: {
     color: {
-      value: "#ffffff",
+      value: "#c8a2c8",
     },
     links: {
-      color: "#ffffff",
+      color: "#a464a4",
       distance: 150,
       enable: true,
       opacity: 0.5,
@@ -73,15 +55,15 @@ const particleOptions: RecursivePartial<IOptions> = {
         default: "bounce",
       },
       random: false,
-      speed: 2,
+      speed: 5,
       straight: false,
     },
     number: {
       density: {
         enable: true,
-        area: 800,
+        area: 1000,
       },
-      value: 80,
+      value: 200,
     },
     opacity: {
       value: 0.5,
@@ -94,9 +76,10 @@ const particleOptions: RecursivePartial<IOptions> = {
     },
   },
   detectRetina: true,
+  smooth: true,
 };
 
-const App = () => {
+const ParticlesBackground = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
@@ -104,21 +87,14 @@ const App = () => {
   const particlesLoaded = useCallback(async (container?: Container) => {
     await console.log(container);
   }, []);
-
   return (
-    <>
-      <Particles
-        style={styles.view}
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={particleOptions}
-      />
-      <ScrollView style={styles.content}>
-
-      </ScrollView>
-    </>
+    <Particles
+      id="tsparticles"
+      init={particlesInit}
+      loaded={particlesLoaded}
+      options={particleOptions}
+    />
   );
 };
 
-export default App;
+export default ParticlesBackground;

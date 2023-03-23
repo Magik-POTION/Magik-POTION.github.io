@@ -1,15 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./views/App";
+import reportWebVitals from "./reportWebVitals";
+import { Provider } from "react-native-paper";
+import { Platform } from "react-native";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider>
+      <React.Fragment>
+        {Platform.OS === "web" ? (
+          <style type="text/css">{`
+        @font-face {
+          font-family: 'MaterialCommunityIcons';
+          src: url(${require("react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf")}) format('truetype');
+        }
+      `}</style>
+        ) : null}
+        <App />
+      </React.Fragment>
+    </Provider>
   </React.StrictMode>
 );
 
