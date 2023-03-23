@@ -4,6 +4,9 @@
   "homepage": "https://Magik-POTION.github.io",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.14",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,7 +16,12 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-native": "^0.71.4",
+    "react-native-web": "^0.18.12",
+    "react-particles": "^2.9.3",
     "react-scripts": "5.0.1",
+    "tsparticles": "^2.9.3",
+    "tsparticles-engine": "^2.9.3",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -43,6 +51,7 @@
     ]
   },
   "devDependencies": {
+    "babel-plugin-react-native-web": "^0.18.12",
     "gh-pages": "^5.0.0"
   }
 }
