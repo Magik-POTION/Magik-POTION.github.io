@@ -2,6 +2,7 @@ import { Linking, StyleSheet, View } from "react-native";
 import { IconButton, Text } from "react-native-paper";
 import githubIcon from "../assets/github-mark/github-mark.svg";
 import linkedin from "../assets/linkedin.svg";
+import email from "../assets/email-outline-custom.png";
 
 const styles = StyleSheet.create({
   footer: {
@@ -21,6 +22,14 @@ const styles = StyleSheet.create({
   },
   row: {
     flexDirection: "row",
+    margin: 16,
+  },
+  email: {
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  title: {
+    margin: 16,
   },
 });
 
@@ -32,10 +41,24 @@ const redirectToLinkedIn = () => {
   Linking.openURL("https://www.linkedin.com/in/k-truong/");
 };
 
+const openEmail = () => {
+  window.open("mailto:truong.k77@gmail.com");
+};
+
 const Footer = () => {
   return (
     <View style={styles.footer}>
+      <Text variant="titleLarge" style={styles.title}>
+        Contact Information
+      </Text>
       <View style={styles.row}>
+        <IconButton
+          size={42}
+          iconColor="white"
+          icon={email}
+          onPress={openEmail}
+          mode="outlined"
+        />
         <IconButton
           size={42}
           iconColor="#967bb6"

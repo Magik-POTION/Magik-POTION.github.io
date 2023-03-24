@@ -19,11 +19,14 @@ const styles = StyleSheet.create({
     color: "white",
   },
   box: {
-    marginVertical: 16,
-    borderColor: "#c8a2c8",
-    borderWidth: 2,
+    marginVertical: 32,
+    borderColor: "#ece0ec",
+    borderWidth: 3,
     padding: 32,
     borderRadius: 16,
+    shadowOpacity: 1,
+    shadowColor: "#c8a2c8",
+    shadowRadius: 32,
   },
 });
 
