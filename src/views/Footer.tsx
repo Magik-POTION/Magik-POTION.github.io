@@ -49,7 +49,7 @@ const Footer = () => {
   return (
     <View style={styles.footer}>
       <Text variant="titleLarge" style={styles.title}>
-        Contact Information
+        More Information
       </Text>
       <View style={styles.row}>
         <IconButton
