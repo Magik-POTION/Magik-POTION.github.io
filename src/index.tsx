@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./views/App";
 import reportWebVitals from "./reportWebVitals";
-import { Provider } from "react-native-paper";
+import { Provider, MD3DarkTheme } from "react-native-paper";
 import { Platform } from "react-native";
 
 const root = ReactDOM.createRoot(
@@ -12,19 +12,19 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <Provider>
-      <React.Fragment>
-        {Platform.OS === "web" ? (
-          <style type="text/css">{`
+    <React.Fragment>
+      {Platform.OS === "web" ? (
+        <style type="text/css">{`
         @font-face {
           font-family: 'MaterialCommunityIcons';
           src: url(${require("react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf")}) format('truetype');
         }
       `}</style>
-        ) : null}
+      ) : null}
+      <Provider theme={MD3DarkTheme}>
         <App />
-      </React.Fragment>
-    </Provider>
+      </Provider>
+    </React.Fragment>
   </React.StrictMode>
 );
 
