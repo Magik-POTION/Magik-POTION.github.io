@@ -89,6 +89,9 @@ const ParticlesBackground = () => {
   }, []);
   return (
     <Particles
+      style={{
+        flex: 1,
+      }}
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
