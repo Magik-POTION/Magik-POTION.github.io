@@ -14,6 +14,9 @@ const styles = StyleSheet.create({
   title: {
     alignSelf: "center",
   },
+  subtitle: {
+    textAlign: "center",
+  },
 });
 
 const ProjectCard = ({ project }: { project: Project }) => {
@@ -31,7 +34,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
         />
         <Card.Title title={project.title} style={styles.title} />
         <Card.Content>
-          <Text>{project.description}</Text>
+          <Text style={styles.subtitle}>{project.description}</Text>
         </Card.Content>
       </Card>
     </TouchableOpacity>

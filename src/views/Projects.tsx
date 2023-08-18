@@ -8,19 +8,19 @@ import nutrition from "../assets/nutrition-custom.png";
 
 const projects: Project[] = [
   {
-    title: "Game POTION",
-    description: "A video game tracking and review application",
+    title: "GamePot",
+    description: "A video game experience sharing application",
     url: "https://sites.google.com/view/iongametracker/home",
     imageSrc: controller,
   },
   {
-    title: "Movie POTION",
-    description: "A movie tracking and review application",
+    title: "VidPot",
+    description: "A movie, tv series, and anime experience sharing application",
     url: "https://sites.google.com/view/ionmovietracker/home",
     imageSrc: movie,
   },
   {
-    title: "Nutrition POTION",
+    title: "NutriPot",
     description: "A meal building and nutrition tracking application",
     url: "https://sites.google.com/view/ion-nutrion/home",
     imageSrc: nutrition,

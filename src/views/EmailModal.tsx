@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Button, Card, IconButton, Portal, Text } from "react-native-paper";
-import { Modal, Touchable, TouchableWithoutFeedback, View } from "react-native";
+import { Button, Card, IconButton, Text } from "react-native-paper";
+import { Modal, TouchableWithoutFeedback, View } from "react-native";
 import emailIcon from "../assets/email-outline-custom.png";
 
 const EmailModal = () => {
@@ -38,7 +38,9 @@ const EmailModal = () => {
             <Card>
               <Card.Title title={"Email"} />
               <Card.Content>
-                <Text variant="bodyLarge" style={{ textAlign: "center" }}>{email}</Text>
+                <Text variant="bodyLarge" style={{ textAlign: "center" }}>
+                  {email}
+                </Text>
               </Card.Content>
               <Card.Actions>
                 <Button onPress={openEmail}>Open in Email App</Button>
